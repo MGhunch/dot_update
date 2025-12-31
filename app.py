@@ -132,7 +132,10 @@ def update():
             }), 404
         
         # Build context for Claude
+        today = date.today()
         current_context = f"""
+Today's date: {today.strftime('%A, %d %B %Y')}
+
 Current job data:
 - Job Number: {job_number}
 - Project Name: {current_data.get('Project Name', 'Unknown')}

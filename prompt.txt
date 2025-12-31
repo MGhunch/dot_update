@@ -78,14 +78,18 @@ COMPLETED → Job finished and delivered
    - "Live on client channels, job complete"
 
 5. NEXT DUE DATE
-   Look for explicit dates or timeframes:
-   - "Due Friday" / "Need by 15th" → extract date
-   - "Next week" / "End of month" → extract approximate date
-   - "Tomorrow" / "Today" → extract date
+   You will be given today's date. Use it to calculate actual dates.
+   
+   - "Due Friday" → calculate the actual date of this/next Friday
+   - "Need by 15th" → use the 15th of current/next month
+   - "Next week" → calculate date ~7 days from today
+   - "End of month" → last working day of current month
+   - "Tomorrow" / "Today" → calculate actual date
    
    If no date mentioned → default to 5 working days from today
    
    Always return a date in YYYY-MM-DD format.
+   Always calculate dates relative to today's date provided.
 
 6. BLOCKERS
    Look for impediments:
